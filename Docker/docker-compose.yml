@@ -8,6 +8,8 @@ services:
       - MYSQL_ROOT_PASSWORD=notes
       - MYSQL_PASS=notes
       - MYSQL_DATABASE=db
+    volumes:
+      - my-datavolume:/var/lib/mysql
   notes-backend:
     image: "mikaelsouza/notes-backend:port50002"
     container_name: notes-backend
@@ -20,3 +22,5 @@ services:
     container_name: notes-frontend
     ports:
       - '50001:50001'
+volumes:
+  my-datavolume:
