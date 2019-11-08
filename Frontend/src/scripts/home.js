@@ -1,4 +1,15 @@
 $(document).ready(function () {
+
+    $.get(
+        "http://localhost:5000/check_init",
+        function (data) {
+            if (data == false) {
+                window.location.href = "initialize.html"
+            }
+        }
+    );
+
+
     $.get(
         "http://localhost:5000/categories",
         function (data) {

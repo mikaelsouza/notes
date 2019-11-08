@@ -45,3 +45,16 @@ def initialize_db(params):
         cnx.close()
 
     return ""
+
+
+def is_initialized(params):
+    initialized = True
+    cnx = connector.connect(**params)
+    cursor = cnx.cursor()
+    query = 'SELECT * FROM note'
+    try:
+        cursor.execute(query)
+    except:
+        initialized = False
+    cnx.close()
+    return initialized

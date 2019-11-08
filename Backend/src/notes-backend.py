@@ -7,7 +7,7 @@ import db
 default_params = {
     'user': 'root',
     'password': 'notes',
-    'host': os.environ['DB_HOST'],
+    'host': 'localhost',
     'database': 'db'
 }
 
@@ -18,6 +18,12 @@ CORS(app)
 @app.route('/')
 def hello():
     return "Hello"
+
+
+@app.route('/check_init')
+def check_init():
+    initialized = db.is_initialized(default_params)
+    return {'data': initialized}
 
 
 @app.route('/categories/')
