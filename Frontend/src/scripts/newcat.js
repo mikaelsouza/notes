@@ -4,7 +4,7 @@ function submitCatData() {
     data = { 'cat_name': cat_name }
 
     $.post(
-        "http://localhost:5000/insert/category", data,
+        "http://localhost:50002/insert/category", data,
         function (result) {
             console.log(result)
             window.location.href = "index.html"

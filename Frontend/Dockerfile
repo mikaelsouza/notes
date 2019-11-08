@@ -4,4 +4,4 @@ WORKDIR /usr/frontend/
 
 COPY /src/ ./
 
-CMD ["python3","-m",  "http.server", "8080"]
+CMD ["python3","-m",  "http.server", "50001"]

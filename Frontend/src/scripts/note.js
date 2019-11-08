@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var id = window.location.search.substr(1);
-    var url = "http://localhost:5000/note/" + id
+    var url = "http://localhost:50002/note/" + id
     $.get(
         url,
         function (data) {

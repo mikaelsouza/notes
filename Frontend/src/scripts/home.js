@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $.get(
-        "http://localhost:5000/categories",
+        "http://localhost:50002/categories",
         function (data) {
             cat_div = document.getElementById('dynamic_cat')
             cat_array = data['data']
@@ -14,7 +14,7 @@ $(document).ready(function () {
         }
     );
     $.get(
-        "http://localhost:5000/notes/",
+        "http://localhost:50002/notes/",
         function (data) {
             notes_div = document.getElementById('dynamic_notes')
             notes_array = data['data']

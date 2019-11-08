@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var id = window.location.search.substr(1);
     $.get(
-        "http://localhost:5000/categories",
+        "http://localhost:50002/categories",
         function (data) {
             cat_div = document.getElementById('dynamic_cat')
             cat_array = data['data']
@@ -18,7 +18,7 @@ $(document).ready(function () {
             }
         }
     );
-    var url = "http://localhost:5000/notes/" + id
+    var url = "http://localhost:50002/notes/" + id
     $.get(
         url,
         function (data) {

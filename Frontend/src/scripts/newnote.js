@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $.get(
-        "http://localhost:5000/categories",
+        "http://localhost:50002/categories",
         function (data) {
             cat_array = data['data']
 
@@ -27,7 +27,7 @@ function submitNoteData() {
     data = { 'title': title, 'data': notes, 'cat_id': cat }
 
     $.post(
-        "http://localhost:5000/insert/note", data,
+        "http://localhost:50002/insert/note", data,
         function (result) {
             console.log(result)
             window.location.href = "index.html"
