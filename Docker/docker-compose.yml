@@ -1,0 +1,24 @@
+version: '2'
+services:
+  notes-db:
+    image: "mikaelsouza/notes-db:0.0.1"
+    container_name: notes-db
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=notes
+      - MYSQL_PASS=notes
+      - MYSQL_DATABASE=db
+  notes-backend:
+    image: "mikaelsouza/notes-backend:0.0.1"
+    container_name: notes-backend
+    ports:
+      - '5000:5000'
+    environment:
+      - DB_HOST=notes-db
+  notes-frontend:
+    image: mikaelsouza/notes-frontend:0.0.1
+    container_name: notes-frontend
+    ports:
+      - '8080:8080'
+

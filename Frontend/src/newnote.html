@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anotações Maneiras</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="scripts/newnote.js"></script>
+</head>
+
+<body>
+    <form action="javascript:submitNoteData();" id="noteform">
+        Título: <br><input id='title' type="text" name="title"><br>
+        Categoria: <br><select id="category"></select>
+        <br>
+        Anotação:<br><textarea id='data' form="noteform" rows="10" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Salvar">
+    </form>
+    <a href="index.html">Início</a>
+</body>
+
+</html>
